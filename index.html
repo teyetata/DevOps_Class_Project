@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes DevOps | teyetata</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Notes</h1>
+        <div class="user-badge">[week 1-week2]</div>
+    </header>
+
+    <section class="hero">
+        <div class="typewriter">
+            <h2>PENJELASAN DEVOPS</h2>
+        </div>
+    </section>
+
+    <div class="summary-box">
+        <h3>// Apa itu DevOps?</h3>
+        <p>DevOps adalah kombinasi dari filosofi budaya, penerapan, dan peralatan yang meningkatkan kemampuan organisasi untuk memberikan aplikasi dalam kecepatan tinggi. Di bawah model ini, tim pengembangan (Dev) dan pengoperasian (Ops) tidak lagi terisolasi, melainkan digabungkan sepanjang siklus hidup aplikasi. Budaya ini membantu pengumpulan kebutuhan sistem hingga penerapan menjadi lebih cepat, handal, dan efektif. Perusahaan seperti PayPal, Facebook, dan Netflix sukses mempercepat pengembangan dari berbulan-bulan menjadi hitungan minggu/hari menggunakan DevOps
+
+    <section class="timeline-section">
+        <h2>// DEVOPS TOOLCHAIN</h2>
+        <div class="grid-container">
+            
+            <div class="card">
+                <h3><span class="step-number">1</span> PLAN</h3>
+                <p>Perencanaan memperhitungkan metrik produksi dan metrik bisnis. Proses ini membutuhkan perencanaan yang agile dan transparan, seringkali dikelola menggunakan pendekatan klasifikasi tugas/fitur pada <em>issue boards</em> seperti JIRA atau GitHub Issues.</p>
+            </div>
+
+            <div class="card">
+                <h3><span class="step-number">2</span> CREATE</h3>
+                <p>Pengembangan perangkat lunak yang dilakukan secara kolaboratif. Semua <em>source code</em> dan konfigurasi dikendalikan secara aman menggunakan <em>Git repositories</em> (seperti GitHub, GitLab, Bitbucket) untuk memfasilitasi komunikasi dan transparansi.</p>
+            </div>
+
+            <div class="card">
+                <h3><span class="step-number">3</span> VERIFY</h3>
+                <p>Proses pengujian <em>source code</em> secara manual antar developer maupun otomatis (dari analisis statis hingga skenario fungsionalitas). Pada Git, sekumpulan komit digrup menjadi <em>pull-requests</em> yang siap diverifikasi oleh developer lain.</p>
+            </div>
+
+            <div class="card">
+                <h3><span class="step-number">4</span> PACKAGE</h3>
+                <p>Tahap terakhir dari tim pengembang di mana <em>source code</em> yang diverifikasi digabung dan dikemas menjadi aplikasi siap pakai untuk <em>end-user</em>. Bisa di-<em>packaging</em> untuk sistem lokal atau <em>container registries</em> (seperti Docker Hub).</p>
+            </div>
+
+            <div class="card">
+                <h3><span class="step-number">5</span> RELEASE</h3>
+                <p>Tahap awal tim operasi, yaitu instalasi aplikasi ke sistem pengguna. Distribusi aplikasi sangat mempertimbangkan <em>downtime</em> yang diizinkan, target lokasi/perangkat pengguna, dan biaya infrastruktur.</p>
+            </div>
+
+            <div class="card">
+                <h3><span class="step-number">6</span> CONFIGURE</h3>
+                <p>Manajemen konfigurasi waktu proses (<em>runtime</em>) dan infrastruktur sistem. Konfigurasi dibuat dan diatur sebagai kode (<em>as code</em>) di dalam <em>Git repositories</em> agar tim secara transparan mengetahui kebutuhan sistem.</p>
+            </div>
+
+            <div class="card">
+                <h3><span class="step-number">7</span> MONITOR</h3>
+                <p>Tahap terakhir yang paling kritis untuk memberikan <em>feedback</em> metrik produksi dan bisnis kembali ke tahap Planning. Terdiri dari proses <em>logging</em>, <em>error tracking</em>, dan <em>cluster monitoring</em> untuk menyelesaikan masalah secara proaktif.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Notes DevOps.
+    </footer>
+
+    <style>
+        :root {
+            --bg-color: #080c14; 
+            --pastel-blue: #a0c4ff; 
+            --pastel-glow: rgba(160, 196, 255, 0.6);
+            --glass-bg: rgba(16, 24, 40, 0.7);
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Fira Code', monospace; 
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            background-image: 
+                linear-gradient(rgba(160, 196, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(160, 196, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Rajdhani', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header {
+            background: rgba(8, 12, 20, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(160, 196, 255, 0.2);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: var(--pastel-blue);
+            text-shadow: 0 0 10px var(--pastel-glow);
+        }
+
+        .user-badge {
+            border: 1px solid var(--pastel-blue);
+            padding: 5px 15px;
+            border-radius: 4px;
+            color: var(--pastel-blue);
+            font-weight: 600;
+            box-shadow: 0 0 10px rgba(160, 196, 255, 0.2) inset;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem 2rem 2rem;
+            position: relative;
+        }
+
+        .typewriter h2 {
+            font-size: 2.8rem;
+            color: #ffffff;
+            overflow: hidden;
+            border-right: 0.15em solid var(--pastel-blue);
+            white-space: nowrap;
+            margin: 0 auto;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+            text-shadow: 0 0 15px var(--pastel-glow);
+            display: inline-block;
+        }
+
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--pastel-blue); } }
+
+        .summary-box {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            margin: 0 10% 3rem 10%;
+            border: 1px solid rgba(160, 196, 255, 0.2);
+            border-left: 5px solid var(--pastel-blue);
+            border-radius: 8px;
+        }
+
+        .summary-box p {
+            line-height: 1.7;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .summary-box strong {
+            color: #ffffff;
+        }
+
+        .timeline-section {
+            padding: 0 10%;
+            margin-bottom: 5rem;
+        }
+
+        .timeline-section h2 {
+            color: var(--pastel-blue);
+            border-bottom: 1px dashed rgba(160, 196, 255, 0.3);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(16, 24, 40, 0.5);
+            padding: 1.5rem;
+            border: 1px solid rgba(160, 196, 255, 0.1);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(20, 30, 50, 0.9);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(160, 196, 255, 0.2);
+            border-top: 3px solid var(--pastel-blue);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #ffffff;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .step-number {
+            background: var(--pastel-blue);
+            color: var(--bg-color);
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 2rem;
+            background-color: rgba(8, 12, 20, 0.9);
+            border-top: 1px solid rgba(160, 196, 255, 0.1);
+            font-size: 0.85rem;
+            color: #475569;
+        }
+    </style>
+</body>
+</html>
